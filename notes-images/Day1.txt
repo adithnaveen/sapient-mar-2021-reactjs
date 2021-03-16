@@ -1,0 +1,268 @@
+1) aayushman -VIT, gaming, plays instruments, drumming 
+Abhinav - thapar university, goes to gym, watching movies 
+	- 
+-------------------------------------------
+2) Aditya - thapar university, goto gym, watch random video, share market likes finance, likes programming with python 
+bharadwaj - VIT, cricket playing, watching movies / series 
+-------------------------------------------
+
+3) devinder - thapar travel and sketchin 
+gaurav - vit, playing footbal, watching animation 
+-------------------------------------------
+
+4) gurveen - thapar, caligraphy 
+inder - thapar, swimming, TT, watching movies / tv series 
+-------------------------------------------
+
+5) pulkit - vit, play crikcet or football 
+raj kumar - srm, partime dancer and choreography 
+-------------------------------------------
+
+6) rajat - vit, play foot ball, watch tv series 
+sajal - thapar, batminton / cricket, watch web series & random youtube videos, 
+plays guitar 
+
+-------------------------------------------
+7) sameer - thapar, play cricket, read articles (tech/medium)
+shruti - vit, dancing, travelling, persue fitness program 
+
+-------------------------------------------
+8) siddharth goradia - vit, plays guitar 
+siddharth rai - srm chennai, plays TT, listen songs, cooking sometimes 
+
+
+
+
+HTML
+CSS(SASS / SCSS)
+javascript 
+typescript 
+jQuery 
+NodeJS
+
+babel 
+webpack 
+
+
+
+HTML
+CSS(SASS / SCSS)
+Vanilla javascript - too much learn, unexpected results, unexpected errors, 
+	for the DOM you are the owner 
+	let node = document.createNode("b"); 
+	let nodeText = document.createText("Hello")
+	node.appendChile(nodeText); 
+typescript 
+
+SPA - Single Page Application 
+all functionalities on single page 
+
+Traditional Application - 
+
+
+Anular 
+React
+Vue
+NestJs
+jQuery 
+Backbone
+vanilla
+
+1. library 
+	- React - jest (jasmine/mocha)
+	- jQuery - functions which are prebuilt, 
+	- Backbone 
+	are set of API - Application Program Interface 
+	
+	backbone - .ajaxSend() 
+	
+	
+	fetch / .ajaxSend() / axios 
+	
+	
+2. framework 
+	-angular 
+		dev - TS 
+		testing - jasmine 
+		fetch data - $http 
+	 	
+	- vue js 
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" ></script>
+
+
+
+1. make a list of libraries available vs framework 
+2. few liners about the difference 
+
+
+1. Why people say react (it has to be coupled with some framework) acts as a framework 
+2. Framework is more values than library 
+3. 
+
+
+
+OOPS 
+
+
+class Employee {
+	constructor(name){
+		this.name = name; 
+	}
+	
+	sayhi(){
+	console.log("hi")
+	}
+	
+	public display() {
+			console.log("Name is", this.name)
+	}
+}
+
+
+function Employee(name) {
+	this.name = name; 
+	
+}
+
+Employee.function.display = () {
+	console.log("name of employee ", this.name)
+}
+
+======================================================================
+
+class Employee {
+	constructor(name) {
+		this.name = name; 
+    }
+  
+  	display(){
+    	console.log("Name is " , this.name)
+    }
+  
+}
+
+
+crating react application 
+
+> npx create-react-app react-demo-01
+
+
+https://eslint.org/docs/rules/
+
+
+
+1. Stateful / class based (life cycle)
+	class MyClass extends React.Component {
+		// i should be able to override the 
+		// behaviours of Component Class 
+	}
+	
+	export default MyClass; 
+	
+2. Stateless / function based  (no life cycle)
+	1. function based 
+	
+	function MyFunction () {
+		return(<div></div>);
+	}
+	
+	// have arrow style function 
+	const MyFunction =() => {
+		return(<div></div>);
+	}
+	
+	2. React Hooks 
+
+
+
+
+Prefix	Method
+imp→	import moduleName from 'module'
+imn→	import 'module'
+imd→	import { destructuredModule } from 'module'
+ime→	import * as alias from 'module'
+ima→	import { originalName as aliasName} from 'module'
+exp→	export default moduleName
+exd→	export { destructuredModule } from 'module'
+exa→	export { originalName as aliasName} from 'module'
+enf→	export const functionName = (params) => { }
+edf→	export default (params) => { }
+met→	methodName = (params) => { }
+fre→	arrayName.forEach(element => { }
+fof→	for(let itemName of objectName { }
+fin→	for(let itemName in objectName { }
+anfn→	(params) => { }
+nfn→	const functionName = (params) => { }
+dob→	const {propName} = objectToDescruct
+dar→	const [propName] = arrayToDescruct
+sti→	setInterval(() => { }, intervalTime
+sto→	setTimeout(() => { }, delayTime
+prom→	return new Promise((resolve, reject) => { }
+cmmb→	comment block
+cp→	const { } = this.props
+cs→	const { } = this.state
+
+
+
+
+React
+Prefix	Method
+imr→	import React from 'react'
+imrd→	import ReactDOM from 'react-dom'
+imrc→	import React, { Component } from 'react'
+imrcp→	import React, { Component } from 'react' & import PropTypes from 'prop-types'
+imrpc→	import React, { PureComponent } from 'react'
+imrpcp→	import React, { PureComponent } from 'react' & import PropTypes from 'prop-types'
+imrm→	import React, { memo } from 'react'
+imrmp→	import React, { memo } from 'react' & import PropTypes from 'prop-types'
+impt→	import PropTypes from 'prop-types'
+imrr→	import { BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
+imbr→	import { BrowserRouter as Router} from 'react-router-dom'
+imbrc→	import { Route, Switch, NavLink, Link } from react-router-dom'
+imbrr→	import { Route } from 'react-router-dom'
+imbrs→	import { Switch } from 'react-router-dom'
+imbrl→	import { Link } from 'react-router-dom'
+imbrnl→	import { NavLink } from 'react-router-dom'
+imrs→	import React, { useState } from 'react'
+imrse→	import React, { useState, useEffect } from 'react'
+redux→	import { connect } from 'react-redux'
+rconst→	constructor(props) with this.state
+
+
+
+ everything inside it will be managed by React DOM.
+
+
+1. List the difference where statefull vs stateless components are used
+2. npx create-react-app app
+	create react app without create-react-app 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
