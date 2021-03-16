@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/01-basics/style.css"],"names":[],"mappings":"AAAA,MACI,sCAAyC,CACzC,UAEJ","file":"main.d4e47f15.chunk.css","sourcesContent":[".myh1 {\n    font-family: Arial, Helvetica, sans-serif;\n    color: blue;\n\n}"]}

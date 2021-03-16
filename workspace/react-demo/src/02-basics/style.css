@@ -1,0 +1,21 @@
+.myh1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+
+div {
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: bisque;
+}
+
+.app-footer {
+    min-height: 100px;
+    text-align: center;
+}
+
+.app {
+    margin: 0 auto;
+    max-width: 800px;
+  
+}
