@@ -1,0 +1,106 @@
+https://kangax.github.io/compat-table/es6/
+
+create bitbucket repo for participants 
+
+0. create react app without create-react-app 
+	https://paulallies.medium.com/react-create-app-without-react-create-app-7c8341282645
+	
+	
+	
+1. YARN Package Manager 
+2. eslint 
+3. react (stateful / stateless with some events)
+post lunch 
+4. mini project 
+	some end points 
+	json-server 
+
+
+
+
+
+
+> npm init -y 
+> get the dependencies 
+>create src folder 
+> index.html, index.js 
+
+
+
+-----------------------------------------------
+
+> npm install bootstrap 
+> yarn add boostrap
+
+nodejs implicitly has npm 
+
+
+> npm install -g yarn
+
+> yarn init 
+> yarn add bootstrap (to get the dependency)
+> yarn (same as npm i)
+> yarn add jest --dev (to get dev dependency)
+> yarn remove boostrap(to remove the dependency)
+
+
+checkstyles 
+eslint
+
+
+working with eslint 
+
+Step 1 : 
+	> npm i -g eslint 
+Step 2:
+	> eslint --init 
+Step 3: 
+	in package.json 
+	scripts: {
+		... 
+		"lint":"eslint src/**/*.js"
+	}
+	to enabled eslint 
+	   
+	    "eslintConfig": {
+	      "extends": [
+	        "react-app",
+	        "react-app/jest"
+	      ]
+	   },
+
+React 
+
+
+
+class Myclass {
+}
+-> converted to 
+
+
+
+
+class Myclass {
+	constructor() {
+	 
+	}
+}
+
+
+
+m = new Myclass();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

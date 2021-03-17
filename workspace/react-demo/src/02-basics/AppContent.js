@@ -12,12 +12,13 @@ class AppContent extends Component {
 
         return (
             <div className="app-content">
-                <h1 class Name="myh1" >THIS IS MAIN CONTENT IN {companyName} </h1>
+                <h1 className="myh1" >THIS IS MAIN CONTENT IN {companyName} </h1>
                 <h2>This is from {name}</h2>
+                
             </div>
         )
     }
 
 }
 
-export default AppContent; 
+export default AppContent;

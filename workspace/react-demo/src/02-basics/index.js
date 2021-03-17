@@ -8,13 +8,18 @@ import './style.css';
 
 class App extends Component {
     render() {
+        const footerProps ={
+            website:"http://ps.com", 
+            year:2021, 
+            company:"Publicis Sapient, Bengaluru"
+        }
         return (
             <div className="app">
                     <AppHeader 
                         company="Publicis Sapient"
                         location="Bengaluru" /> 
                     <AppContent /> 
-                    <AppFooter />
+                    <AppFooter {...footerProps} />
             </div>
         );
     }
