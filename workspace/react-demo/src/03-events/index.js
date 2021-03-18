@@ -3,9 +3,6 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 
-const Btn = props => {
-    return (<button className="btn btn-warning" onClick={props.handler}>{props.caption}</button>)
-}
 
 
 class App extends Component {

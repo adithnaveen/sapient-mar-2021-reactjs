@@ -82,7 +82,19 @@ class Myclass {
 
 class Myclass {
 	constructor() {
-	 
+	 	super();
+		this.hi = this.hi.bind(this);
+	}
+	hi() {}
+	render() {
+		// is the implicit method in the react life cycle
+		// which shall be invoked when the page is loaded 
+		{this.props.key}
+		<button
+			onclick ={this.hi}
+			>callme 
+		</button>
+	
 	}
 }
 
@@ -94,13 +106,25 @@ m = new Myclass();
 
 
 
+<MyClass key="value" /> 
+
+
+when evern the state variable is mutated then the render is called 
 
 
 
+https://tools.publicis.sapient.com/bitbucket/scm/psijxtib/react-project-07.git
 
+1) Aayshman - Abhinav 
+2) Adithya - siddharth 
+3) Devender - garuav	
+4) gurveen - shruti 
+5) inder - sajal
+6) raj kumar - rajat
+7) sameer - pulkit
 
-
-
-
+1. host the web server 
+2. design the screen 
+3. have simple place holders in react app 
 
 
