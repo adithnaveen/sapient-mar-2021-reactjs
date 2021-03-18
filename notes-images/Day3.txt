@@ -1,0 +1,92 @@
+rules: {
+   "react/react-in-jsx-scope": "off",
+   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], 
+  }
+  
+  
+ formError: { 
+  email: ""
+  name: "please enter name"
+  phone: ""
+  }
+  
+  let valid = true; 
+  Object.values(formError).forEach (err => valid =  valid && err.length===0 )
+  return valid; 
+  
+  
+  
+const mycomponent =() => {}
+
+class MyComponent extends Component {}
+  
+  
+class Parent {
+	render() {}
+	hi() { parent hi}
+	bye() {}
+}
+
+
+
+class Child extends Parent{
+	hi() {
+		child hi
+	}
+}
+
+c = new Child (); 
+
+c.hi(); 
+c.bye();
+c.render(); 
+
+
+let url = "http://localhost:4000/banners/1"
+
+fetch(url). then().then().catch()
+  
+  
+
+class Mycomponent extends Component {
+
+	state ={
+		name:"inder"
+	}
+
+	componentDidMount() {
+	
+		let name = fetch(url).then(data => data.json()).then(resp => this.setState({name:"gaurav"}))
+	
+		
+	}
+
+	render() {
+
+		<div>
+			<p>{this.state.name}</p>
+		</div>
+	}
+}
+
+
+
+  
+  (06, 13, 20, 27)-Mar-2021, (03, 10, 17)-Apr-2021
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

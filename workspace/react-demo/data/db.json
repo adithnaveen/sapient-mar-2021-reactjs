@@ -1,0 +1,44 @@
+{
+    "employees": [
+        {
+            "id": 101,
+            "name": "Sajal",
+            "gender": "male",
+            "email": "sajal@gmail.com",
+            "phone": "9090909090",
+            "picture": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        {
+            "id": 102,
+            "name": "siddharth",
+            "gender": "male",
+            "email": "sid@gmail.com",
+            "phone": "9090909090",
+            "picture": "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        {
+            "id": 103,
+            "name": "Gurveen",
+            "gender": "female",
+            "email": "gurveen@gmail.com",
+            "phone": "9090909090",
+            "picture": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        {
+            "id": 104,
+            "name": "shruthi",
+            "gender": "female",
+            "email": "shruthi@gmail.com",
+            "phone": "9090909090",
+            "picture": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        {
+            "id": 105,
+            "name": "Pulkit",
+            "gender": "male",
+            "email": "pulkit@gmail.com",
+            "phone": "34783439090",
+            "picture": "https://randomuser.me/api/portraits/men/20.jpg"
+        }
+    ]
+}

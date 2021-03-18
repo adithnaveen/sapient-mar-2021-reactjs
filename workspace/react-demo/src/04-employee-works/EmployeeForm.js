@@ -5,29 +5,78 @@ class EmployeeForm extends Component {
         name: '',
         email: '',
         phone: '',
-        picture: ''
+        picture: '',
+        formError: {
+            name: "Name is required",
+            email: "Email is required",
+            phone: "Phone is required"
+        },
+        errorMessages: ""
     }
 
     addEmployee = (evt) => {
-        console.log(evt.target);
+        evt.preventDefault();
+        console.log("Form Submitted... ")
+        let { formError } = this.state;
+
+        if (this.validateForm(formError)) {
+            alert("Form Submitted Successfully");
+        } else {
+            let errorMessages = Object.values(formError).map((err, index) => err.length === 0 ? ""
+                : <li key={index}>{err}</li>)
+            this.setState({ errorMessages })
+        }
+
+    }
+
+    /* 
+        formError: {name:"", phone:""}
+    */
+
+
+    validateForm = (formError) => {
+        let valid = true;
+        Object.values(formError).forEach(err => valid = valid && err.length === 0);
+        return valid;
     }
 
     tfHandler = (evt) => {
-        // version 1.0 
-        // let name = evt.target.name;
-        // let value = evt.target.value;
-
-        // let modifiedState = {};
-        // modifiedState[name] = value;
-        // this.setState(modifiedState);
-        // console.log(this.state);
-
-        // version 2.0 
-        // this.setState({ [evt.target.name]: evt.target.value })
-
         let { name, value } = evt.target;
         this.setState({ [name]: value });
-        console.log(this.state);
+        let { formError } = this.state;
+
+        switch (name) {
+            case "name":
+                if (!value || value.length === 0) {
+                    formError.name = "Name is Required"
+                } else if (value.length < 3 || value.length > 20) {
+                    formError.name = "Name must be between 3 to 20 chars"
+                } else {
+                    formError.name = "";
+                }
+                break;
+            case "email":
+                if (!value || value.length === 0) {
+                    formError.email = "Email Required"
+                } else if (!value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+                    formError.email = "Email format is invalid"
+                } else {
+                    formError.email = "";
+                }
+                break;
+            case "phone":
+                if (!value || value.length === 0) {
+                    formError.phone = "Phone Number Required";
+                } else if (!value.match(/\d{10,12}$/)) {
+                    formError.phone = "Please enter phone between 10 to 12 chars"
+                } else {
+                    formError.phone = "";
+                }
+                break;
+
+            default:
+                break;
+        }
     }
 
     render() {
@@ -48,7 +97,7 @@ class EmployeeForm extends Component {
                     <div className="form-group row">
                         <label htmlFor="Employee email" className="control-label col-md-4">Employee email</label>
                         <div className="col-md-8">
-                            <input type="email"
+                            <input type="text"
                                 value={this.state.email}
                                 name="email" onChange={this.tfHandler} className="form-control" />
                         </div>
@@ -58,8 +107,8 @@ class EmployeeForm extends Component {
                         <label htmlFor="Employee Contact" className="control-label col-md-4">Employee Contact</label>
                         <div className="col-md-8">
                             <input type="text"
-                                value={this.state.contact}
-                                name="contact" onChange={this.tfHandler} className="form-control" />
+                                value={this.state.phone}
+                                name="phone" onChange={this.tfHandler} className="form-control" />
                         </div>
                     </div>
 
@@ -75,6 +124,18 @@ class EmployeeForm extends Component {
                     <button className="btn btn-danger">Submit</button>
 
                 </form>
+
+                <hr />
+                <div className="container">
+                    <h2>Current State</h2>
+                    <pre>{JSON.stringify(this.state, null, 3)}</pre>
+                </div>
+
+                <div className="container">
+                    <ul>
+                        {this.state.errorMessages}
+                    </ul>
+                </div>
             </div>
         );
     }
