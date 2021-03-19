@@ -11,7 +11,9 @@ import ReactDOM from 'react-dom';
 // working with hooks 
 // import App from './07-hooks/ex-01'
 // import App from './07-hooks/ex-02'
-import App from './07-hooks/ex-03'
+// import App from './07-hooks/ex-03'
+
+import App from './08-banners'
 
 
 ReactDOM.render(<App />, 
