@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
-    "rest-server": "json-server --port=4000 --watch data/db.json"
+    "rest-server": "json-server --port=4000 --delay 3500 --watch data/db.json "
   },
   "browserslist": {
     "production": [

@@ -1,19 +1,14 @@
 import React, { Component } from 'react'
 
 import EmployeeCard from './EmployeeCard';
+import loading1 from './loading1';
 
 class EmployeeList extends Component {
-    state = { emps: [] }
-
-    componentDidMount() {
-        fetch("http://localhost:4000/employees")
-            .then(resp => resp.json())
-            .then(data => this.setState({ emps: data }))
-    }
+    
     render() {
 
-        const employeeList = this.state.emps.map(emp => <EmployeeCard key={emp.id} emp={emp} />)
-
+        const employeeList = this.props.emps.map(emp => <EmployeeCard key={emp.id} emp={emp} />)
+ 
         return (
             <div className="container">
                 <h1 className="alert alert-info">Working with Employees</h1>
@@ -23,4 +18,4 @@ class EmployeeList extends Component {
     }
 }
 
-export default EmployeeList;
+export default loading1(EmployeeList);
