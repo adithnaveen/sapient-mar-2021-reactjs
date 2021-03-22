@@ -1,0 +1,273 @@
+let resp = await fetch(url, {
+        method  :"POST",
+        body : JSON.stringify(contact),
+        headers : {
+            'Content-Type' :"application/json"
+        }
+		
+	
+let resp = await fetch(url+ID, {
+        method  :"DELETE",
+        headers : {
+            'Content-Type' :"application/json"
+        }
+
+let resp = await fetch(url, {
+        method  :"PUT",
+        body : JSON.stringify(contact),
+        headers : {
+            'Content-Type' :"application/json"
+        }
+
+
+	let resp = await fetch(URL , {method:'GET'}); 
+	await result = resp.json(); 
+	
+fetch - part of core javascrip t
+axios - external library (npm i axios)
+jquery (you have to have external library, npm i jquery)
+	
+
+class MyComponent extends Component {
+	// has some complext code 
+}
+
+export default hoc(MyComponent); 	
+
+
+
+<html>
+
+	<h1>hello</h1>
+</html>
+
+
+
+<html>
+	<body>
+		<employe></employee>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+class MyComponent extends Component {}
+
+const MyComponent =(props) => {}
+
+when we only want to return we use function based component 
+
+
+
+class First extends Object{}
+class Second extends First {}
+class Third extends Second {}
+class Fourth extends Third{}
+
+f = new Fourth(); 
+
+
+2013  - 2016 
+var myOldComponent = React.createClass({
+	render: function() {
+		return(
+			<div>
+				<h1>My Old Style React Component </h1>
+			</div>
+		) 
+	}
+});
+
+> 2016 (state is here, life cycle )
+class MyCurrentClass extends React.Component {
+	render() {
+		return(
+			<div>
+				<h1>My Old Style React Component </h1>
+			</div>
+		)
+	}
+}
+
+
+// function based component (state is not here, no life cycle )
+function FunctionComponent = () => {
+	return(
+		<div>
+			<h1>My Function Component </h1>
+		</div>
+	)
+}
+
+
+ Hooks (function based component )
+ 
+ MyFirstHook =() =>  {
+	const [emp, setEmp] = useState("Raj Kumar"); 
+	return(
+		<div>
+			<h1>This is myHook</h1>
+		</div>
+	)
+}
+
+
+// code from react 
+
+
+import React, { useState } from 'react';
+
+function Example() {
+   
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("inder"); 
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+
+useState
+useEffect 
+useReducer 
+
+
+
+
+
+
+class MyCurrentClass extends React.Component {
+	state = {emps:[]}
+
+	componentDidMount() {
+	fetch(URL).then(resp => resp.json).then(data=> this.setState({emps:data})); 
+	}
+
+	render() {
+		return(
+			<div>
+				{this.state.emps}
+			</div>
+		)
+	}
+}
+
+
+const App =() => {
+	const [emps, setEmps] = useState([]); 
+	
+	useEffect(()=>{})
+	
+	return(
+		<div>
+			{emps}
+		</div>
+	)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References 
+
+https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+scribles 
+	
+	
+		
+	
+	
+    return (
+               <div>
+                   {
+                       Object.entries(data).map((p, key) =>
+                           <Product product={p} key={key} />
+                       )
+                   }
+
+               </div>
+           )
+	
+	
+
+	const App = () => {
+	    const [data, setData] = useState([]);
+
+	    useEffect(() => {
+	        fetch("http://localhost:4000/banners")
+	            .then(resp => resp.json())
+	            .then(data => setData(data));
+	    }, [])
+
+	    if (data) {
+	        return (
+	            <div>
+	                {data.map(p => <Product key={p.id} product={p} />)}
+
+	            </div>
+	        )
+	    }
+	    return "getting";
+	}
+
+	export default App;
+	
+
+	 
+
+
+
+
+
+
+
+	
