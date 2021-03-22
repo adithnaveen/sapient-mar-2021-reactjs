@@ -1,0 +1,265 @@
+1-6 - React 
+TDD 
+	Jest / Enzyme 
+
+lazy loading 
+error handlers / suspense / fallback / routers 
+SSR / CSR - concepts 
+
+
+on the server side rendering 
+
+class MyBusinessLogic {
+	public Employee getEmployee(int empId) {
+		// talk to db
+		return emp; 
+	}
+}
+
+
+-to controller 
+class BusinessController extends HttpServlet {
+	public void doGet(HttpRequest req, HttpResponse res) {
+		MyBusinessLogic mbl = new MyBusinessLogic(); 
+		Employee emp= mbl.getEmployee(101); 
+		req.setAttribute("EMP",emp ); 
+		req.dispatch(req, res).forward("/somepage.jsp"); 
+	}
+	
+	public void doPost() {}
+}
+
+
+
+showemployee.jsp 
+
+<html>
+	<body>
+		<h1>Employee Name Sajal </h1>
+	</body>
+</html>
+
+
+
+
+
+
+
+const myapp =  ()=> {
+	return(
+		<div>
+			<EmployeeList /> 
+		</div>
+	);
+}
+
+const EmployeeList = () => {
+	const [emp, setEmp] = useSate({}); 
+	useEffect(() => {
+		fetch()..... 
+	})
+	
+	return(
+		<div>
+			Employee Name is {state.emp.name}
+		</div>
+	);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://cricket.yahoo.net/news/road-safety-world-series-round-181730646
+
+
+
+
+
+testing using jsUnit 
+
+TDD 
+
+ReactJS 
+	https://jestjs.io
+Angular 
+	https://jasmine.github.io
+VueJS
+NestJS 
+AngularJS 
+	https://mochajs.org
+
+
+
+App.js 
+App.test.js
+
+EmployeeForm.js
+EmployeeForm.test.js
+EmployeeForm.spec.js
+
+
+
+
+describe("", () => {
+
+	describe("", () => {
+		test("", () => {
+	
+		})
+
+		describe("", () => {
+			test("", () => {
+		
+			})
+
+		})
+	})
+
+	test("", () => {
+	
+	})
+	test("", () => {
+	
+	})
+	
+})
+
+
+
+with shallow 
+
+ <div>
+      <h2>
+        First Test React App 
+      </h2>
+      <MyComponent />
+    </div>
+-----------------------------------------------
+with mount
+  <App>
+      <div>
+        <h2>
+          First Test React App 
+        </h2>
+        <MyComponent>
+          <div>
+            <h2>
+              Hi from MyComponent
+            </h2>
+          </div>
+        </MyComponent>
+      </div>
+    </App>
+
+--------------------------------------------------
+with render 
+ <body>
+      <div>
+        <div>
+          <h2>
+            First Test React App 
+          </h2>
+          <div>
+            <h2>
+              Hi from MyComponent
+            </h2>
+          </div>
+        </div>
+      </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://jestjs.io
+https://enzymejs.github.io/enzyme/
+
+
+test(() => {
+foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.lengthOf(3);
+tea.should.have.property('flavors')
+  .with.lengthOf(3);
+
+})
+
+
+
+expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.lengthOf(3);
+expect(tea).to.have.property('flavors')
+  .with.lengthOf(3);
+
+
+
+
+
+assert.typeOf(foo, 'string');
+assert.equal(foo, 'bar');
+assert.lengthOf(foo, 3)
+assert.property(tea, 'flavors');
+assert.lengthOf(tea.flavors, 3);
+
+
+products = 4000 
+banners = 4001 
+categories = 4002 
+
+
+db.json 
+{
+	"product" : {}, 
+	"banners" :{}, 
+	"categories" :{}
+}
+
+
+
+1. all training code to be seeded on bitbucket 
+2. by 3:00PM first version of project to be seeded on bitbucket 
+	dev 
+
+ 
+7-8 
+Redux / React-Redux 
+
+9 
+	isomrophic react app + nodejs + express application 
+	SSR + CSR - implementation 
+	
+	rest end point - with express JS understanding of Microservices 
+10-11 
+	Devops 

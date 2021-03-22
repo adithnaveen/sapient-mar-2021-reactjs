@@ -1,23 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from '../App';
 
-import { shallow} from 'enzyme'; 
+import { mount} from 'enzyme'; 
 
 describe('testing my first app', () => {
 
   let wrapper ; 
   beforeEach(() => {
-    wrapper = shallow(<App />);
-  })
-
-  test('looking for the text called as React', () => {
-    // const wrapper = shallow(<App />);
-    const wrapper = render(<App />); 
-    console.log(wrapper.debug());
+    wrapper = mount(<App />);
   })
 
   test("To check the string on the page First Test React App", () => {
-    
     expect(wrapper.find("h2").text()).toContain("First Test React App"); 
   })
 
