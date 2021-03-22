@@ -1,17 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-import {configure, shallow} from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-
-configure({adapter : new Adapter()});
-
+import { shallow} from 'enzyme'; 
 
 describe('testing my first app', () => {
 
   let wrapper ; 
   beforeEach(() => {
-    wrapper = shallow(<App />); 
+    wrapper = shallow(<App />);
   })
 
   test('looking for the text called as React', () => {
