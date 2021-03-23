@@ -1,1 +1,0 @@
-{"version":3,"sources":["09-lazy/NotFound.js"],"names":["NotFound"],"mappings":"qHAAA,uBAUeA,UARE,WACb,OACI,mCACI","file":"static/js/3.2a5db152.chunk.js","sourcesContent":["import React from 'react'\n\nconst NotFound = () => {\n    return(\n        <>\n            <h1>Hi I'm from NotFound Comoponent</h1>\n        </>\n    ); \n}\n\nexport default NotFound; "],"sourceRoot":""}

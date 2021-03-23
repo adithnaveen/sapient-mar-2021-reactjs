@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-demo-01"]=this["webpackJsonpreact-demo-01"]||[]).push([[4],{29:function(e,t,n){"use strict";n.r(t);n(0);var c=n(2);t.default=function(){return Object(c.jsx)(c.Fragment,{children:Object(c.jsx)("h1",{children:"Hi I'm from Sample Comoponent"})})}}}]);
-//# sourceMappingURL=4.d8c13dbc.chunk.js.map
