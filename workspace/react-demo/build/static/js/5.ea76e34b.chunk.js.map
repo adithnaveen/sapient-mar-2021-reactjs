@@ -1,0 +1,1 @@
+{"version":3,"sources":["09-lazy/Testing.js"],"names":["Testing"],"mappings":"qHAAA,uBAUeA,UARC,WACZ,OACI,mCACI","file":"static/js/5.ea76e34b.chunk.js","sourcesContent":["import React from 'react'\n\nconst Testing = () => {\n    return(\n        <>\n            <h1>Hi I'm from Testing Comoponent</h1>\n        </>\n    ); \n}\n\nexport default Testing; "],"sourceRoot":""}

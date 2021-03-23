@@ -13,7 +13,8 @@ import ReactDOM from 'react-dom';
 // import App from './07-hooks/ex-02'
 // import App from './07-hooks/ex-03'
 
-import App from './08-banners'
+// import App from './08-banners'
+import App from './09-lazy'
 
 
 ReactDOM.render(<App />, 

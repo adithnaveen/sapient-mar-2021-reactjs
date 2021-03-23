@@ -1,0 +1,1 @@
+{"version":3,"sources":["09-lazy/Sample.js"],"names":["Sample"],"mappings":"qHAAA,uBAUeA,UARA,WACX,OACI,mCACI","file":"static/js/4.d8c13dbc.chunk.js","sourcesContent":["import React from 'react'\n\nconst Sample = () => {\n    return(\n        <>\n            <h1>Hi I'm from Sample Comoponent</h1>\n        </>\n    ); \n}\n\nexport default Sample; "],"sourceRoot":""}
