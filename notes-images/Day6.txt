@@ -1,0 +1,105 @@
+
+lazy loading 
+error handlers / suspense / fallback / routers 
+
+
+
+
+
+import 'mycomponent' from './mycomponent'; 
+import 'mycomponent1' from './mycomponent1'; 
+import 'mycomponent2' from './mycomponent2'; 
+import 'mycomponent3' from './mycomponent3'; 
+
+
+class App = () => {
+	return(
+		<>
+			<mycomponent /> 
+			<mycomponent1 /> 
+			<mycomponent2 /> 
+			<mycomponent3 /> 									
+		</>
+	);
+}
+
+npm start 
+npm run build 
+	babel es6, jsx -> js 
+		+ webpack js + css + saas + images -> 1 sigle bundle 
+			index.html 
+			filename1.chunk.js
+			filename2.chunk.js
+			filename3.chunk.js
+			filename4.chunk.js
+			filename5.chunk.js
+
+
+
+http://localhost:3000/
+
+http://localhost:3000/sample 
+
+http://localhost:3000/hello
+
+Before 
+import OtherComponent from './OtherComponent';
+
+After 
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+const FallBack = React.lazy(() => import ("./FallBack"))
+const App = () => {
+	return(
+		<>
+				<div>
+					<Suspense fallback={<FallBack />}>
+					<OtherComponent /> 
+					</Suspense>					
+				</div>
+		</>
+	);
+}
+
+
+
+http://localhost:3000/othercompo
+
+
+
+code splitting 
+suspense 
+fallback = 404 
+ 
+            <Suspense fallback = {<div>Please wait its loading.. </div>}>
+                <Sample />
+                <Testing />
+            </Suspense>
+
+
+
+SSR / CSR - concepts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

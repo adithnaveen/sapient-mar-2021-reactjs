@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react'
 
-import 'bootstrap/dist/css/bootstrap.css';
-
 const App = () => {
 
     const [count, setCount] = useState(0);
