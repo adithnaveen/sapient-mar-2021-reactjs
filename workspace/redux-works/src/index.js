@@ -1,59 +1,37 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.css'; 
+import './index1.css'; 
+import Product from './components/Product'
 
 import {createStore} from 'redux';
+import {Provider} from 'react-redux'
 
-const initialState = ['Sameer', 'Gurveen'];
-const reducer = (state=initialState, action) => {
+const product = {
+    price : 1000
+}
+
+const reducer = (state=product , action) => {
     switch (action.type) {
-        case "ADD_NAME":
-            return [...state, action.data]
-        case "DELETE_NAME":
-            let names = [...state]
-            names.splice(action.data, 1)
-            return names
+        case 'INCREMENT':
+            return {price : state.price + action.data}
+        case 'DECREMENT':
+            return {price : state.price - action.data}
         default:
-            return state
+            return state;
     }
 }
 
-const store = createStore(reducer)
-window['store'] = store
+const store = createStore(reducer); 
 
-///////////////////////////////////////////
-
-const submitHandler =(evt) => {
-    evt.preventDefault();
-    const name = document.getElementById("name").value;
-    const action = {type:"ADD_NAME", data:name};
-    store.dispatch(action);
-    document.getElementById("name").value ="";
-    document.getElementById("name").focus();
-}
-
-document.getElementById("formName").onsubmit = submitHandler; 
-
-///////////////////////////////////////////
-
-const updateList = () => {
-    let names = store.getState(); 
-    let list = names.map((name, index) =>
-        '<li class="list-group-item"> '+ 
-        '<button class="btn btn-danger" onclick="deleteName('+index+')"> X </button>'
-        + name +'</li>'
+const App = () => {
+    return(
+        <div>
+            <Provider store={store} >
+                <Product />
+            </Provider>
+        </div>
     )
-    let listOfNames = list.join('');
-    document.getElementById("namesList").innerHTML = listOfNames; 
 }
 
-window['updateList'] = updateList;
-updateList()
-store.subscribe(updateList);
-
-///////////////////////////////////////////////
-
-window['deleteName'] = (index) => {
-    const action = {type:"DELETE_NAME", data:index}
-    store.dispatch(action)
-}
-
+ReactDOM.render(<App />, document.getElementById("root")); 
