@@ -32,6 +32,6 @@ const App = () => {
             </Provider>
         </div>
     )
-}
+} 
 
 ReactDOM.render(<App />, document.getElementById("root")); 

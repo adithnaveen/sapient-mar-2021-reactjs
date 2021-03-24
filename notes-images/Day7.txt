@@ -1,0 +1,135 @@
+React - library 
+
+Flux 
+
+Redux -> framework 
+
+React-Redux 
+
+
+Component 
+---------------
+StateLess 
+StateFull
+	state variable -> call render 
+Hooks 
+	useState
+
+PUB-SUB 
+
+
+
+R1 
+
+R2 (props)
+
+R3 (props + R1 Props)
+
+R4 (prpos + R2, R1 Props)
+
+R5 (props + R3, R2, R1 Props)
+
+
+
+let action = {type:"ADD_EMPLOYEE", data:name};  - 1 
+let actionDel = {type:"DELETE_EMPLOYEE", data:1} - 2
+let actionUpd = {type:"UPDATE_EMPLOYEE", data:newName} - 3
+
+
+function reducer(state, action) {
+	switch(action.type){
+		case:'ADD_EMPLOYEE': 
+			state = [...state, action.data]; 
+			return state; 
+		case :'DELETE_EMPLOYEE':
+			break; 
+		case : 'UPDATE_EMPLOYEE': 
+			break; 
+		default : 
+			break; 
+	}
+}
+
+
+> yarn add redux bootstrap
+
+or 
+
+> npm i redux bootstrap
+
+
+
+
+
+
+
+
+pulkit - 6 > 
+gurveen - 7
+devinder - 6 
+
+
+
+const ProductApp =- () => {
+	return(
+		<div>
+			<ProductForm props={somevalue} /> 
+			<ProductList props={somevalue} />
+		</div>
+	);
+}
+
+
+
+
+repo 
+	react-assessment-01.git 
+	
+* master 
+
+git branch <your LLID>
+> git branch inderbir
+> git checkout inderbir 
+start working 
+
+.gitignore 
+	node_modules 
+	
+git add . 
+git commit -m "your message"
+git push origin inderbir
+
+
+
+npx create-react-app react-redux-works
+
+
+npx create-react-app redux-essentials-example --template redux
+
+
+
+index.js 
+
+ReactDome.render(<App />, document.getElementById("root")); 
+
+
+class App extends Component {
+	state= {price:1000}
+	
+	render(){
+		return(
+			<App1 price={this.state.price} /> 
+		)
+	}
+}
+
+class App1 extends Component {
+
+}
+
+
+
+
+
+
+

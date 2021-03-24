@@ -80,7 +80,7 @@ fallback = 404
 SSR / CSR - concepts 
 
 
-
+npm install  @babel/preset-env  @babel/preset-react @babel/register
 
 
 
