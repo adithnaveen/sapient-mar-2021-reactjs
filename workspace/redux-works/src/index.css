@@ -1,0 +1,13 @@
+.alert {
+    min-height: 500px;
+    margin-left: 20px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+body {
+    margin: 10px;
+}
