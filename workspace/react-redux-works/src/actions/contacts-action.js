@@ -1,18 +1,20 @@
 import {ADD_CONTACT, DELETE_CONTACT, FETCH_CONTACTS, URL} from '../constants/types'
 
-export const fetchContacts =() => {
+export const fetchContacts = () => {
     return async (dispatch) => {
-        let resp = await fetch(URL)
+        let resp = await fetch("http://localhost:4000/contacts/")
         let contacts = await resp.json()
+        
         let action = {type:FETCH_CONTACTS, data : contacts}
+      
         dispatch(action)
     }
 }
 
 export const addContact = (contact) => async (dispatch) => {
         let resp = await fetch(URL, {
-            method: 'POST', 
-            body : JSON.stringify(contact), 
+            method: 'POST',
+            body : JSON.stringify(contact),
             headers : {
                 'Content-Type' :'application/json'
             }

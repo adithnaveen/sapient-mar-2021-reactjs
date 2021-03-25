@@ -1,7 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {deleteContact} from '../actions/contacts-action'
 
-
-const ContactCard = ({ contact}) => (
+const ContactCard = ({ contact, deleteContact}) => (
     <div className="card" >
 
         <div className="row">
@@ -15,6 +16,7 @@ const ContactCard = ({ contact}) => (
                     <h5 className="card-title">{contact.name}
 
                         <button  
+                        onClick ={() => {deleteContact(contact.id)}}
                         className="btn btn-link float-right">&times;</button>
 
                     </h5>
@@ -26,4 +28,4 @@ const ContactCard = ({ contact}) => (
     </div>
 );
 
-export default ContactCard;
+export default  connect(null, {deleteContact})(ContactCard);

@@ -3,7 +3,7 @@ import {ADD_CONTACT, DELETE_CONTACT, FETCH_CONTACTS} from '../constants/types'
 // action.type
 // action.data 
 
-export default (state ={contacts:[]}, action) => {
+function contactsReducer (state ={contacts:[]}, action)  {
 
     switch (action.type) {
         case ADD_CONTACT:
@@ -29,3 +29,5 @@ export default (state ={contacts:[]}, action) => {
            return state; 
     }
 }
+
+export default  contactsReducer; 
