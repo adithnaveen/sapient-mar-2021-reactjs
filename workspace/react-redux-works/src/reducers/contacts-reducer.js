@@ -1,4 +1,4 @@
-import {ADD_CONTACT, DELETE_CONTACT, FETCH_CONTACTS} from '../constants/types'
+import {ADD_CONTACT, DELETE_CONTACT, FETCH_CONTACTS, GET_CONTACT} from '../constants/types'
 
 // action.type
 // action.data 
@@ -25,6 +25,11 @@ function contactsReducer (state ={contacts:[]}, action)  {
            {
                return {...state, contacts: action.data}
            }
+
+        case GET_CONTACT:
+            {
+                return {...state, contact: action.data}
+            }
         default:
            return state; 
     }

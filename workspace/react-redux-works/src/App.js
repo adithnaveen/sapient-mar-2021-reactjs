@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import ContactForm from './components/ContactForm'
 import ContactList from './components/ContactList'
-
+import ContactDetail from './components/ContactDetail'
 
 import { createStore, applyMiddleware } from 'redux'
 import rootReducers from './reducers/root-reducers'
@@ -43,6 +43,7 @@ class App extends Component {
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/add-contact" exact={true} component={ContactForm} />
                 <Route path="/view-contacts" exact={true} component={ContactList} />
+                <Route path="/contact-detail/:id" exact component={ContactDetail} />
               </div>
             </div>
           </div>

@@ -80,8 +80,9 @@ class ContactForm extends Component {
             let contact = { name, email, phone, picture };
             
            // add your contact here 
+           console.log("in submit handler: ", this.props);
             this.props.addContact(contact);
-            
+            this.props.history.push("/view-contacts")
             this.setState({
                 name: '',
                 email: '',
