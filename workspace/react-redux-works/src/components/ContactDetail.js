@@ -23,8 +23,24 @@ class ContactDetail extends Component {
                             alt={contact.name} style={{ height: 200 }} />
                     </div>
                     <div className="col-md-8">
-                        {contact.name}
-                        {contact.email}
+                        <div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td class="table-primary">Name</td>
+                                    <td><div className="card-title">{contact.gender === 'male' ? "Mr: " : "Ms/Mrs: "}{contact.name}  </div></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-primary">Email </td>
+                                    <td>  <div className="card-text">{contact.email}</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-primary">Phone </td>
+                                    <td><div className="card-text">{contact.phone}</div></td>
+                                </tr>
+
+                            </table>
+
+                        </div>
                     </div>
                 </div>
             </div>
