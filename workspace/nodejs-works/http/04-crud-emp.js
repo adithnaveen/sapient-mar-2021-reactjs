@@ -47,17 +47,32 @@ app.get("/api/db/emps/:id", async (req, res) => {
 // http://localhost:3000/api/db/emps/ -- all records 
 app.get("/api/db/emps/", async (req, res)=> {
     try {
-        const contact = await  empSer.getAllEmployees(); 
-        res.json(contact);
+        const emp = await  empSer.getAllEmployees(); 
+        res.json(emp);
     }catch(err) { 
         res.json(err)
     }; 
 })
 
-app.delete("/api/db/emps/:id", (req, res)=> {})
+app.delete("/api/db/emps/:id", async (req, res)=> {
+    try {
+        const id = req.params.id;
+        const resp = await  empSer.deleteEmpById(id) 
+        res.json(resp);
+    }catch(err) { 
+        res.json(err)
+    }; 
+})
 
-app.put("/api/db/emps", (req, res) => {})
-
+app.put("/api/db/emps",  (req, res) => {
+    empSer.updateEmployee(req.body)
+        .then(data => {
+            let output = {};
+            output = data;
+            res.json(output);
+        })
+        .catch(err => res.json(err))
+})
 
 app.listen(PORT, () => console.log(`Application started on ${PORT}`));
 

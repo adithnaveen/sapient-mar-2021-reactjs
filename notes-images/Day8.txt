@@ -1,0 +1,39 @@
+import {Provider} from 'react-redux';
+const store = createStore(rootReducer)
+const App = () => {
+
+	return(
+		<div>
+			<Provider store={store}>
+				<Product /> 
+			</Provider>
+		</div>
+	);
+
+}
+
+
+
+function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
+
+
+
+45 mins 
+
+1. when contact is added -> route to view all contacts (done)
+2. when you click on contact -> show full details 
+
+
+params 
+
+http://localhost:4000/contacts/1
+http://localhost:4000/contacts/2
+http://localhost:4000/contacts/3
+http://localhost:4000/contacts/4
+
+
+
+
+
+
+
