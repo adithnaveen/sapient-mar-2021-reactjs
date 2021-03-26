@@ -16,14 +16,48 @@ app.use((req, res, next) => {
     next() 
 })
 
+// http://localhost:3000/api/db/emps
 app.post("/api/db/emps", (req, res) => {
     empSer.addEmployee(req.body)
         .then(data => {
             let output = {};
             output.id = data; 
+            output.address = `http://localhost:${PORT}/api/db/emps/${data}`
             res.json(output);
         })
         .catch(err => res.json(err))
 })
 
-app.listen(PORT);
+// http://localhost:3000/api/db/emps/:id - specific record 
+
+app.get("/api/db/emps/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+        let output= {}; 
+        output.emp= await  empSer.getEmpById(id); 
+        output.allempslink = `http://localhost:${PORT}/api/db/emps/`; 
+        res.json(output);
+    }catch(err) { 
+        res.json(err)
+    }; 
+})
+
+
+
+// http://localhost:3000/api/db/emps/ -- all records 
+app.get("/api/db/emps/", async (req, res)=> {
+    try {
+        const contact = await  empSer.getAllEmployees(); 
+        res.json(contact);
+    }catch(err) { 
+        res.json(err)
+    }; 
+})
+
+app.delete("/api/db/emps/:id", (req, res)=> {})
+
+app.put("/api/db/emps", (req, res) => {})
+
+
+app.listen(PORT, () => console.log(`Application started on ${PORT}`));
+

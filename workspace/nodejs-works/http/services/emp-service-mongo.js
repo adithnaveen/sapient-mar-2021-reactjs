@@ -71,31 +71,71 @@ class EmployeeService {
     }
 
 
-    /*getAllEmployees() {}
+    getEmpById(id) {
+        return new Promise((resolve, reject) => {
+            if(!id || typeof id !== 'string') {
+                let err ={}; 
+                err.code = 1003; 
+                err.message = "Please enter string format";
+                reject(err)
+                return
+            }
+
+            getEmpCollection((err, client, empsCollection) => {
+                if(err) {
+                    reject(err);
+                    client.close(); 
+                    return ;
+                }
+
+                try {
+                    id = new ObjectId(id);
+                }catch(err){
+                    reject(err); 
+                    client.close(); 
+                    return; 
+                }
+
+                empsCollection.findOne({_id : id}, (err, data) => {
+                    if(err) {
+                        reject(err);
+                    }else {
+                        resolve(data);
+                    }
+                    client.close();
+                })
+            })
+        })
+    }
+    
+    getAllEmployees() {
+        return new Promise((resolve, reject) => {
+            getEmpCollection((err, client, empsCollection) => {
+                if(err) {
+                    reject(err)
+                    client.close();
+                    return; 
+                }
+
+                empsCollection.find().toArray((err, data)=> {
+                    if(err) {
+                        reject(err);
+                    }else {
+                        resolve(data);
+                    }
+                    client.close();
+                })
+
+            })
+        })
+    }
+
+    /*
     updateEmployee(employee) {}
-    getEmployee(empId) {}
+ 
     deleteEmployee(empId) {}
 */
 }
 
 
 module.exports = EmployeeService; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
