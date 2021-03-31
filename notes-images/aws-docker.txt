@@ -1,0 +1,135 @@
+Jenkins (CI/CD)
+> java -jar jenkins.war --httpPort=9090 
+
+
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+       nodejs "node"
+    }
+
+    stages {
+		stage('hello'){
+		steps {
+			echo 'pre stage'
+			sh 'npm --version' 
+			}
+		}
+        stage('Git') {
+            steps {
+              git clone 'https://github.com/adithnaveen/react-jenkins-docker.git'
+            }
+        }
+        stage('Build') {
+            steps {
+              sh 'npm install'
+			  sh 'npm start'
+            }
+        }
+    }
+}
+
+
+
+aws works 
+> sudo yum update -y
+> sudo yum install -y docker 
+> sudo dockerd 
+> sudo docker run hello-world - open new terminal then type 
+> sudo yum install -y gcc-c++ make 
+> curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+> sudo yum install -y nodejs
+
+
+
+
+> scp -i /Volumes/Kanchan/MyTrainings/sapient/freshers-2021-react-js/documents/aws-react.pem -r /Volumes/Kanchan/MyTrainings/sapient/freshers-2021-react-js/workspace/react-demo ec2-user@ec2-54-165-246-111.compute-1.amazonaws.com:/home/ec2-user
+
+
+
+
+
+
+
+
+
+> cp source dest 
+> scp some.pem -it -r /somefolder/somefolder ec2-user@182.166.13.28:/home/ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

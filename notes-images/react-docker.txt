@@ -1,0 +1,190 @@
+NodeJS 
+Express JS - create rest end point 
+Understand what is MicroServices 
+PUB-SUB 
+
+persist the data in DB (MongoDB)
+
+
+
+HDFC / SBI /PNB
+
+salary 
+
+sajal 
+rajat
+
+shruthi 
+
+
+
+LINKEDIN / FACEBOOK / TWITTER 
+
+sajal 
+rajat
+
+shruthi 
+
+
+
+npm i express body-parser mongodb
+
+
+http://localhost/example/kumar/35?city=blr&country=india 
+
+http://localhost/example?city=blr&country=india 
+
+
+
+1xx - request made 
+2xx - request successful 
+3xx - redirection 
+4xx - client problem 
+5xx - server problem 
+
+
+
+
+
+
+> mongod --dbpath . 
+
+open new terminal 
+> mongo 
+
+
+
+
+
+
+
+
+index.js 
+|- components 
+|- constants 
+|- reducers 
+|- actions 
+
+
+server 
+|- index.js 
+|- services 
+	|- empservice.js
+
+
+
+deliver the product as early as possbile 
+
+Agile 
+
+
+docker 
+> docker version 
+> docker info 
+> docker --help 
+> docker images - show all the images which are pulled from hub.docker.com 
+> docker ps - will show number of containers running 
+> docker stop <container id> - stop running container 
+> docker ps -a - show all the container which are even stopped 
+> docker rm <container-id> - remove the containers 
+
+
+> docker run hello-world 
+> docker run -it ubuntu bash
+> cat /etc/os-release
+
+
+> DockerCli.exe -SwitchDaemon
+> net stop com.docker.service
+
+
+
+> docker pull mongo:3.6.23-xenial
+> docker pull mongo:4.2.13-bionic
+
+> docker pull mongo:latest -- image 
+> docker run --name sapient-mongo -p 27017:27017 -d mongo
+> docker exec -it sapient-mongo1 bash - take you inside docker container 
+> mongo 
+> use mydb
+> db.emps.insert({empid:101, name:'sajal'}) 
+> db.emps.insert({empid:102, name:'devinder'}) 
+> db.emps.insert({empid:103, name:'rajat'}) 
+> exit 
+
+> exit - back to your native OS 
+> mongo 
+> use mydb;
+db.emps.find().pretty();
+
+
+
+
+Swarm / Rancher / Kubernetees 
+
+
+
+
+
+
+> docker pull node:latest 
+> docker pull node:14.16.0-alpine 
+
+Dockerfile 
+
+FROM node:14.16.0-alpine 
+COPY . /app
+RUN make /app
+CMD python /app/app.py
+
+> docker build -t adithnaveen/react-app-02 .
+
+> docker run --name react-ap-02 -p 3000:3000 adithnaveen/react-app-02
+
+ 
+
+
+1. Dockerfile 
+----------------------------------
+FROM node:14.16.0-alpine
+WORKDIR /app
+ENV PATH="/app/node_modules/.bin:$PATH"
+COPY package.json package-lock.json ./
+RUN npm install 
+COPY . ./
+
+CMD [ "npm", "start" ]
+
+2. .dockerignore
+-----------------------------
+node_modules
+build 
+Dockerfile 
+
+3. build the image from Dockerfile 
+ docker build -t adithnaveen/react-app-02 .
+
+
+4. execute the image which is built 
+docker run --name react-ap-02 -p 3000:3000 adithnaveen/react-app-02
+
+
+
+
+
+
+docker network create -d bridge sapinet-network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
